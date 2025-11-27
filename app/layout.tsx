@@ -7,25 +7,12 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "The Future of Leadership in a Digital Age | Business Review",
+  title: "Agentic AI in Finance: Why the Future Will Reward the Cautious, Not the Fastest | Business Review",
   description:
     "How modern leaders are adapting to technological disruption and creating sustainable competitive advantage in an increasingly digital world.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: "/favicon.png",
     apple: "/apple-icon.png",
   },
 }

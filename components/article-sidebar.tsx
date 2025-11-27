@@ -23,13 +23,13 @@ export function ArticleSidebar() {
         <h3 className="font-bold text-lg text-foreground">About the Author</h3>
         <div className="w-20 h-20 rounded-full bg-muted" />
         <div>
-          <div className="font-semibold text-foreground">Dr. Sarah Chen</div>
+          <div className="font-semibold text-foreground">Angela Weigl</div>
           <div className="text-sm text-muted-foreground mt-1">
             Professor of Management at Stanford Graduate School of Business
           </div>
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Dr. Chen is a leading expert on digital transformation and organizational leadership. Her research focuses on
+          Dr. Weigl is a leading expert on digital transformation and organizational leadership. Her research focuses on
           how leaders adapt to technological disruption.
         </p>
         <Button variant="outline" size="sm" className="w-full bg-transparent">

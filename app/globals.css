@@ -5,7 +5,7 @@
 
 :root {
   /* <CHANGE> HBR-inspired design tokens: warm neutrals with refined red accent */
-  --background: oklch(0.99 0.005 85);
+  --background: oklch(1 0 0);
   --foreground: oklch(0.25 0.01 85);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.01 85);
@@ -122,6 +122,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
