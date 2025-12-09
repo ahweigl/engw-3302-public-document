@@ -1,97 +1,85 @@
+import Image from "next/image"
+
 export function ArticleContent() {
   return (
     <article className="prose prose-lg max-w-none">
       <div className="font-serif text-foreground space-y-6 leading-relaxed">
-        <div className="w-full h-[400px] bg-muted rounded-sm mb-8" />
+        <div className="w-full h-[400px] relative rounded-sm mb-8 overflow-hidden">
+          <Image
+            src="/article-image.jpg"
+            alt="Agentic AI in Finance"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
         <p className="text-lg first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
-          Agentic AI has become the newest obsession in finance. Autonomous systems promise unbelievable strides in productivity and operational efficiency, with tools promising market prediction, trade execution, portfolio management, and risk management. If you work in finance today, you are being told that agentic AI is the next frontier.
+          Finance has spent decades building guardrails: pre-trade checks, model-risk governance, approval hierarchies, and maker–checker protocols. But those guardrails were designed for human actors and deterministic systems — NOT for autonomous AI that can initiate tasks, call APIs, send messages, or interact with external platforms.
         </p>
 
         <p>
-          Beyond the hype, a deeper truth is emerging: the future of finance will reward firms that adopt agentic AI cautiously, not quickly. The advantage will belong to institutions that combine technological ambitions with governance and human expertise. And yet, many leaders underestimate just how transformative–and risky–agentic systems can be.
+          That gap is already creating problems.
         </p>
 
         <p>
-          This article examines how agentic AI is reshaping finance, why trust and transparency matter now more than ever, and what firms can do today to embrace this tech without losing control of their data, reputations, or regulatory standing. The goal is simple: to give finance professionals a clear, non-technical roadmap for thinking about AI that is powerful enough to act but grounded enough to avoid disaster.
+          Across the industry, teams are experimenting with agentic AI under the assumption that they're adding efficiency. In reality, many are unknowingly introducing the largest undetected operational-risk escalation since algorithmic trading.
+        </p>
+
+        <p>
+          This article tackles an urgent problem: firms are adopting agentic AI without understanding where its real risks originate. The danger isn't just that these systems can act autonomously — it's that they can appear competent and compliant right up until the moment they quietly break a rule, expose sensitive data, or make a decision no one can retrace.
+        </p>
+
+        <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
+          The winners in this next wave of AI won't be the firms that move the fastest. Firms that move cautiously with agentic AI will outperform those who rush in. Yet, many finance professionals underestimate just how disruptive, and risky, agentic AI systems truly are.
+        </blockquote>
+
+        <p>
+          This article breaks down where those blind spots come from, why traditional controls won't catch them, and what firms can do now to stay ahead of a technology that moves faster than existing governance structures. The goal is not simply to inform finance professionals, but to help you recognize the specific failure modes that surface only when AI is allowed to act, not just analyze—and to give them a practical way to prepare before those failures become public, costly, and irreversible.
         </p>
 
         <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">What Makes Agentic AI Different</h2>
 
         <p>
-          Traditional AI models generate predictions: whether a market signal suggests upward trends, whether a transaction resembles fraud, or whether a loan applicant is likely to repay their debt. These systems support human decision makers.
-        </p>
-
-        <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
-          Agentic AI is different. It acts.
-        </blockquote>
-
-        <p>
-          Instead of producing a recommendation, it can:
+          When a traditional AI model makes a prediction, it might do things like:
         </p>
 
         <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Initiate trades</li>
-          <li>Adjust portfolios</li>
-          <li>Communicate with stakeholders</li>
-          <li>Launch internal workflows</li>
-          <li>Execute trades</li>
+          <li>Flag a transaction as potentially fraudulent, but wait for a human to approve whether to freeze the account</li>
+          <li>Forecast that a market sector is likely to decline, but wait for a portfolio manager to rebalance</li>
+          <li>Recommend which clients may be at risk of churn, but leave it to an analyst to decide what outreach to send</li>
         </ul>
 
         <p>
-          In other words, it goes beyond prediction into autonomous execution. This shift introduces incredible opportunity– and enormous operational risk.
+          Agentic AI changes that. It doesn't just identify patterns or risks– it initiates the action itself. For example:
         </p>
 
+        <ul className="list-disc list-inside space-y-2 ml-4">
+          <li>Instead of flagging a suspicious transaction, it automatically freezes the account and sends the client an alert</li>
+          <li>Instead of predicting a sector decline, it rewrites the portfolio allocation and executes the trades</li>
+          <li>Instead of generating a list of churn-risk clients, it drafts and sends personalized outreach emails</li>
+        </ul>
+
         <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
-          For non-technical finance professionals, the simplest way to understand agentic AI is this: It's software that doesn't just think. It decides. And it does so at scale with real data.
+          This is the difference between a system that advises and a system that acts. This shift introduces incredible opportunity– and enormous operational risk.
         </blockquote>
 
         <p>
-          When those decisions are correct, the upside is tremendous: faster risk monitoring, more precise analytics, improved margins, and better customer experience. When those decisions are wrong, the consequences can spiral quickly and publicly.
-        </p>
-
-        <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Why Finance Leaders are Excited</h2>
-
-        <p>
-          Across the industry, agentic AI is already providing value in several areas.
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          Fraud Detection and Compliance
-        </p>
-        <p>
-          Agentic systems excel at identifying unusual patterns in transactions and filings– spotting issues long before manual reviews could.
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          Real-time Risk Management
-        </p>
-        <p>
-          Financial risk moves faster than human analysts can. Agentic systems can ingest vast data streams, flag anomalies, and trigger workflows instantly. Instead of waiting for daily risk reports, firms can operate with continuous visibility.
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          Portfolio Management and Advisory
-        </p>
-        <p>
-          Some wealth platforms now use agentic systems to adjust portfolios, rebalance allocations, and personalize financial plans dynamically. Human advisors remain in the loop, but AI does the heavy lifting.
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          Operational automation
-        </p>
-        <p>
-          Report generation, data reconciliation, and forecasting– all can now be delegated to autonomous systems that operate around the clock.
-        </p>
-
-        <p>
-          These capabilities promise enormous value. And yet, many firms are discovering that agentic AI introduces problems they didn't anticipate.
+          When those decisions are correct, the upside is tremendous: early experiments suggest agentic-AI crews can detect risk or fraud with efficiency gains — in some cases reducing manual-review loads by 15–40%. If deployed carefully, these systems could dramatically accelerate back-office workflows and free human teams to focus on strategy rather than rote compliance. Those efficiencies come with a sharp tradeoff. When those decisions are wrong, the consequences can spiral quickly and publicly, as seen with Deloitte.
         </p>
 
         <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">The Hidden Risks: Firms Are More Vulnerable Than They Think</h2>
 
         <p>
-          The story of Deloitte's agentic AI mishap, where they published an erroneous AI-generated report, is not an anomaly. It is a preview of a future that firms will find themselves in without exercising caution.
+          The story of Deloitte's AI mishaps, most recently when a $1.6 million health-care report for a Canadian provincial government was found to cite entirely fabricated academic research generated by AI, is far from an anomaly. Their second failure, following an earlier botched report for Australia, underscores just how high the stakes are. When major consulting firms with reputations for rigor deliver flawed, AI-tainted reports, the operational, regulatory, and reputational fallout can ripple across entire institutions.
+        </p>
+
+        <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
+          For finance professionals, the lesson is immediate: if a global consulting firm can't prevent AI-driven errors from reaching the public, most financial institutions are even less prepared. Agentic AI doesn't just automate tasks — it automates mistakes, and it does so at speed and scale that human oversight can't easily keep up with.
+        </blockquote>
+
+        <p>
+          Most failures in agentic AI fall into three categories:
         </p>
 
         <p>
@@ -125,124 +113,103 @@ export function ArticleContent() {
 
         <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Why Trust & Transparency Must Come First</h2>
 
-        <p>
-          Finance operates on trust– between institutions, clients, markets, and regulators. Introducing agentic AI without establishing transparency is like hiring a brilliant employee who refuses to explain their decision process.
-        </p>
-
-        <p>
-          To build trust, firms need two capabilities:
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          Explanability
-        </p>
-        <p>
-          Leaders must be able to articulate:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Why data is used</li>
-          <li>How data is used</li>
-          <li>How a system works</li>
-          <li>Why the system made a decision</li>
-          <li>What alternatives it considered</li>
-        </ul>
-
-        <p className="font-semibold text-foreground mt-4">
-          Auditability
-        </p>
-        <p>
-          Every action an agentic AI takes must be traceable. Firms should know:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>The exact input that triggered an action</li>
-          <li>The chain of steps the AI followed</li>
-          <li>Whether the decision complied with policy</li>
-        </ul>
-
         <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
-          These are not technical luxuries. They are the foundation of responsible AI in finance.
+          Introducing agentic AI without establishing transparency is like hiring a brilliant employee who refuses to explain their decision process.
         </blockquote>
 
-        <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">The Human-AI Partnership: What Roles Will Professionals Play?</h2>
-
         <p>
-          Contrary to popular fear across industries, agentic AI is not replacing professionals, it is reshaping their roles. Here are two dynamics that may take shape in the near future:
+          Finance leaders don't need their agentic AI systems to be mysterious or magical—they need them to be understandable and accountable. Two capabilities make that possible: explainability and auditability. Without both, even well-designed systems can erode trust internally and expose firms to regulatory or reputational risk.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          AI as Analyst, Human as Strategist
+          1. Explainability: Turning Black Boxes Into Glass Boxes
         </p>
         <p>
-          AI can process data and trigger workflows, but humans set direction, interpret context, and evaluate consequences.
-        </p>
-
-        <p className="font-semibold text-foreground mt-4">
-          AI as Executor, Human as Decision-Maker
-        </p>
-        <p>
-          Even the best agentic AI should not have final authority, especially not in trading, lending, or compliance.
-        </p>
-
-        <p>
-          For finance professionals, the new skillset includes:
+          Explainability is not a technical nice-to-have; it's what allows leaders to answer basic questions regulators, clients, and boards increasingly ask:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Understanding how AI-driven systems behave</li>
-          <li>Evaluating algorithmic output critically</li>
-          <li>Knowing when to intervene</li>
-          <li>Communicating risks to leadership and clients</li>
+          <li><strong>Why was this data used?</strong> (Was it relevant? Was it permitted under privacy requirements?)</li>
+          <li><strong>How was it used?</strong> (Was it transformed? Derived into features? Combined with other sources?)</li>
+          <li><strong>How does the model or agent work?</strong> (What logic or policy constraints guide its actions?)</li>
+          <li><strong>Why did it make this decision?</strong> (Which factors mattered most? Were any potential biases involved?)</li>
+          <li><strong>What alternatives did it consider and reject?</strong> (Was the final output the only option, or one of many?)</li>
         </ul>
 
-        <blockquote className="border-l-4 border-primary pl-6 my-8 italic text-xl text-foreground/90">
-          The future belongs to firms that treat AI as a partner, not a replacement.
-        </blockquote>
+        <p>
+          Explainability lets firms interrogate the system the same way they interrogate a junior analyst. It's what turns AI from a black box into a glass box — transparent, inspectable, and suitable for high-stakes environments.
+        </p>
+
+        <p className="font-semibold text-foreground mt-4">
+          2. Auditability: Being Able to Reconstruct Any Decision, Anytime
+        </p>
+        <p>
+          Explainability tells you the logic. Auditability tells you the trail.
+        </p>
+        <p>
+          Every autonomous action an agentic AI takes, whether updating credit lines, rebalancing a portfolio, triggering a fraud alert, should be traceable:
+        </p>
+        <ul className="list-disc list-inside space-y-2 ml-4">
+          <li>The input that triggered the action</li>
+          <li>The chain of steps the AI took in response</li>
+          <li>The intermediate information it generated or retrieved</li>
+          <li>The checks it passed or failed</li>
+          <li>Whether the final decision complied with internal policy or external regulations</li>
+        </ul>
+
+        <p>
+          In highly regulated environments, this is non-negotiable. Regulators assume that if a firm cannot explain or reconstruct a decision, then the firm cannot control its system, which is itself a compliance violation.
+        </p>
+        <p>
+          Auditability also enables rapid post-incident review. When a system goes wrong, you can diagnose the failure instead of guessing at it.
+        </p>
+
 
         <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">A Practical Framework: How Firms Can Adopt Agentic AI, Safely</h2>
 
         <p>
-          Finance leaders need a roadmap that balances innovation with governance. Here is a simple, actionable framework.
+          Finance leaders don't need more abstract warnings or glossy vendor promises. What they need is a way to bring automation into their organizations without exposing themselves to operational or regulatory surprises. A practical path forward starts small, focuses on control, and grows only as confidence builds.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Start with low-risk autonomy
+          Begin with low-risk autonomy.
         </p>
         <p>
-          Let AI automate internal workflows, reporting, or monitoring before touching client data or markets.
+          Before allowing AI to influence markets or touch client accounts, pilot it on internal tasks—workflow routing, documentation prep, report synthesis. These early wins help teams understand the system's behavior in a controlled environment.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Establish human-in-the-loop controls
+          Keep humans in the loop where it matters.
         </p>
         <p>
-          Define clear boundaries for when human signoff is required. No autonomous system should make irreversible decisions.
+          Agentic AI is powerful, but it should not have the authority to make irreversible or high-impact decisions. Establish explicit triggers where human review is mandatory—credit line changes, trade execution, large-scale data movement. This isn't about slowing things down; it's about preventing a small anomaly from snowballing.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Implement audit trails immediately
+          Put audit trails in place from day one.
         </p>
         <p>
-          Track every action, input, and output from any AI system. This protects firms against regulatory risk and supports internal accountability.
+          Every action an AI system takes should be traceable—what it saw, what it did, and why. Firms that wait to implement logging until after an incident almost always regret it. Comprehensive records don't just satisfy regulators; they allow teams to diagnose issues quickly and confidently.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Test for bias and failure cases
+          Test for drift, bias, and failure modes—continuously.
         </p>
         <p>
-          Agentic systems can degrade over time. Testing must be continuous.
+          Models degrade. Data shifts. Policies change. Assumptions that held in January may break in July. Continuous testing keeps behavior predictable and ensures the system still makes sense under new conditions.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Train teams before deploying AI
+          Prepare the people before you deploy the technology.
         </p>
         <p>
-          The people supervising AI must understand how to interpret and question its decisions.
+          The teams supervising these tools must know how to read explanations, interpret anomalies, and challenge questionable outputs. A well-trained staff is still the strongest safeguard against runaway automation.
         </p>
 
         <p className="font-semibold text-foreground mt-4">
-          Align AI objectives with firm values and compliance protocols
+          Align the AI's goals with the firm's goals.
         </p>
         <p>
-          Poor alignment creates runaway behavior. Clear objective-setting prevents unintended outcomes.
+          Misaligned objectives are the root cause of most unintuitive—or unsafe—agent behavior. Explicit guardrails and value-aligned metrics ensure the system attempts to optimize the right outcomes.
         </p>
 
         <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">The Bottom Line: Caution is a Competitive Advantage</h2>
@@ -262,3 +229,4 @@ export function ArticleContent() {
     </article>
   )
 }
+

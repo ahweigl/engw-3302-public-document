@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Bookmark, Share2, Mail } from "lucide-react"
+import { Bookmark, Share2, Mail, User } from "lucide-react"
 
 export function ArticleSidebar() {
   return (
@@ -21,7 +21,9 @@ export function ArticleSidebar() {
 
       <div className="border border-border rounded-sm p-6 bg-card space-y-4">
         <h3 className="font-bold text-lg text-foreground">About the Author</h3>
-        <div className="w-20 h-20 rounded-full bg-muted" />
+        <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
+          <User className="h-10 w-10 text-muted-foreground" />
+        </div>
         <div>
           <div className="font-semibold text-foreground">Angela Weigl</div>
           <div className="text-sm text-muted-foreground mt-1">

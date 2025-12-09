@@ -1,3 +1,5 @@
+import { User } from "lucide-react"
+
 export function ArticleHero() {
   return (
     <div className="bg-background border-b border-border">
@@ -13,7 +15,9 @@ export function ArticleHero() {
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-muted" />
+              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                <User className="h-6 w-6 text-muted-foreground" />
+              </div>
               <div>
                 <div className="font-semibold text-foreground">Angela Weigl</div>
               </div>
